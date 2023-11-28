@@ -36,7 +36,7 @@ def remove_response_and_save_mseed(input_dir, output_dir, metadata_dir):
         inv = read_inventory(metadata_path,level="network")
 
         # Remove instrument response
-        st.remove_response(inventory=inv, output="ACC")
+        st.remove_response(inventory=inv, output="VEL")
 
         # Save the processed stream as MiniSEED
         st.write(output_path, format="MSEED")
